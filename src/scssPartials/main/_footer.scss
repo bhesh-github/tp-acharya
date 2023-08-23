@@ -1,0 +1,229 @@
+.spinner-wrapper {
+  .spinner {
+  }
+}
+
+.footer-comp {
+  background-color: $primaryDarkBlue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  .contents {
+    // justify-content: center;
+    // display: flex;
+    padding: 7em 0;
+    // flex-direction: column;
+    .top-bar {
+      width: 1197px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1.5fr;
+      gap: 9em;
+      .company-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        color: #fff;
+        .company-logo {
+          background-color: #fff;
+          width: 110px;
+          height: 50px;
+        }
+      }
+      .links-wrapper {
+        color: #fff;
+        .title {
+          margin-bottom: 1em;
+          font-weight: 600;
+          font-size: 18px;
+        }
+        .links {
+          gap: 1em;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          .link {
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .form {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+        .caption {
+          margin-bottom: 1em;
+          font-weight: 600;
+          font-size: 18px;
+          color: #fff;
+        }
+        .email-input-field {
+          border-radius: 5px;
+          border: none;
+          width: 100%;
+          font-size: 18px;
+          font-size: 15px;
+          padding: 10px 10px;
+        }
+        .validation-error {
+          color: yellow;
+          font-family: Roboto;
+          font-weight: 300;
+          font-size: 15px;
+        }
+        .submit-btn {
+          background-color: $primaryPink;
+          color: #fff;
+          border-radius: 30px;
+          padding: 7px 30px;
+          text-transform: capitalize;
+          max-height: 35px;
+          min-height: 35px;
+          max-width: 110px;
+          min-width: 110px;
+        }
+      }
+    }
+    @media screen and (max-width: 1310px) {
+      .top-bar {
+        width: 1050px;
+      }
+    }
+    @media screen and (max-width: 1160px) {
+      .top-bar {
+        width: 900px;
+      }
+    }
+    @media screen and (max-width: 1020px) {
+      .top-bar {
+        width: 700px;
+        gap: 3em;
+      }
+    }
+    @media screen and (max-width: 790px) {
+      .top-bar {
+        padding: 0em 1em;
+        height: max-content;
+        width: 600px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2em;
+      }
+    }
+    @media screen and (max-width: 650px) {
+      .top-bar {
+        grid-template-columns: 1fr;
+        width: 550px;
+        .links-wrapper {
+          .links {
+            width: 200px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 615px) {
+      .top-bar {
+        width: 450px;
+      }
+    }
+    @media screen and (max-width: 525px) {
+      .top-bar {
+        width: 400px;
+      }
+    }
+    @media screen and (max-width: 460px) {
+      .top-bar {
+        width: 350px;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .top-bar {
+        width: 300px;
+        .form {
+          width: 250px;
+        }
+      }
+    }
+    @media screen and (max-width: 350px) {
+      .top-bar {
+        padding: 0;
+        width: 280px;
+        .form {
+          width: 230px;
+        }
+      }
+    }
+    @media screen and (max-width: 350px) {
+      .top-bar {
+        width: 250px;
+      }
+    }
+  }
+
+  // ------------------------------------------
+  .bottom-bar {
+    background-color: $primaryDarkerBlue;
+    padding: 1em 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .text {
+      width: 1197px;
+      color: #fff;
+    }
+    @media screen and (max-width: 1310px) {
+      .text {
+        width: 1050px;
+      }
+    }
+    @media screen and (max-width: 1160px) {
+      .text {
+        width: 900px;
+      }
+    }
+    @media screen and (max-width: 1020px) {
+      .text {
+        width: 700px;
+        gap: 3em;
+      }
+    }
+    @media screen and (max-width: 790px) {
+      .text {
+        padding: 0em 1em;
+        height: max-content;
+        width: 600px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2em;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .text {
+        grid-template-columns: 1fr;
+        .links-wrapper {
+          .links {
+            width: 200px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .text {
+        .form {
+          max-width: 320px;
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .text {
+        .form {
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}

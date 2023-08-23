@@ -1,0 +1,110 @@
+.pararasta-niti-comp {
+  background-color: #fff;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: 4em;
+  .contents {
+    padding: 4em 0;
+    height: 100%;
+    width: 1197px;
+    .title {
+      color: $primaryPink;
+      font-size: 50px;
+      font-weight: 600;
+    }
+    .desc {
+      color: rgb(38, 38, 38);
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 10; /* number of lines to show */
+      line-clamp: 10;
+      -webkit-box-orient: vertical;
+      font-size: 17px;
+      word-spacing: 10px;
+      line-height: 26px;
+      text-align: justify;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .read-more-wrapper {
+      cursor: pointer;
+      margin-top: 3.5em;
+      display: flex;
+      gap: 10px;
+      .btn-text {
+        color: $primaryBlue;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: 1310px) {
+    .contents {
+      width: 1050px;
+      .read-more-wrapper {
+        cursor: pointer;
+        margin-top: 2em;
+      }
+    }
+  }
+  @media screen and (max-width: 1160px) {
+    .contents {
+      width: 900px;
+      .read-more-wrapper {
+        cursor: pointer;
+        margin-top: 2em;
+      }
+    }
+  }
+  @media screen and (max-width: 1020px) {
+    .contents {
+      width: 700px;
+      gap: 3em;
+      .read-more-wrapper {
+        cursor: pointer;
+        margin-top: 1.5em;
+      }
+    }
+  }
+  @media screen and (max-width: 790px) {
+    .contents {
+      text-align: justify;
+      height: max-content;
+      width: 600px;
+      display: flex;
+      gap: 2em;
+      flex-direction: column;
+      .text-container {
+        width: 100%;
+      }
+      .image-container {
+        width: 100%;
+        .profile-img {
+          max-width: 70%;
+        }
+      }
+      .read-more-wrapper {
+        cursor: pointer;
+        margin-top: 1em;
+      }
+    }
+  }
+}
+@media screen and (max-width: 670px) {
+  .pararasta-niti-comp {
+    margin-top: 3.5em;
+    .contents {
+      padding: 0em 1em;
+      .title {
+        font-size: 27px;
+      }
+      .desc {
+        margin-top: -2em;
+      }
+    }
+  }
+}

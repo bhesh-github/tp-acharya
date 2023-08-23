@@ -1,0 +1,133 @@
+// Global styles and transitions
+.timeline-transition {
+  transition: background-image 0.5s ease-in-out;
+}
+
+// Timeline Wrapper
+.timeline-wrapper {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.356);
+
+  // Timeline Background
+  .timeline-background {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.1s ease-in, background-image 0.3s ease-in; /* Adjust durations as needed */
+    opacity: 1;
+  }
+
+  // Timeline Content
+  .timeline {
+    width: 100%;
+    overflow: hidden;
+    transition: background-image 0.5s ease-in-out;
+
+    // Columns Wrapper
+    .columns-wrapper {
+      display: flex;
+
+      // Caption Wrapper
+      .caption-wrapper {
+        
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 5em;
+        height: max-content;
+        width: 230px;
+        font-weight: 600;
+        font-size: 50px;
+        color: #fff;
+      }
+
+      // Years Inner
+      .years-inner {
+        margin-left: 13em;
+        font-family: Roboto;
+        font-style: italic;
+        display: flex;
+        flex-direction: column;
+        padding: 20em 0;
+        border-right: 1px solid #fff;
+        height: 100%;
+
+        // Dot Year Wrapper
+        .dot-year-wrapper {
+          display: flex;
+          flex-direction: column;
+
+          // Year
+          .year {
+            color: #ffffff73;
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1em;
+            width: 280px;
+            display: flex;
+            margin: 0.2em 0;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            transition: font-size 0.5s;
+            height: 100px;
+
+            // Selected Year
+            &.selected {
+              color: #fff;
+              transition: font-size 0.5s;
+              font-weight: 600;
+              font-size: 5em;
+              gap: 0.4em;
+            }
+
+            // Dot
+            .dot {
+              font-size: 40px;
+              margin-right: -0.5em;
+            }
+          }
+        }
+      }
+    }
+
+    // Content
+    .content {
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 3em;
+      padding: 20px;
+      left: 35em;
+      color: #fff;
+      font-size: 18px;
+      height: 100%;
+
+      // Text
+      .text {
+        text-align: left;
+        width: 650px;
+
+        // Title
+        .title {
+          font-size: 3em;
+
+          // Changing Years
+          .changing-years {
+            font-size: 0.8em;
+          }
+        }
+
+        // Brief
+        .brief {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+.intro-comp {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  .contents {
+    padding: 7em 0;
+    // height: 500px;
+    width: 1197px;
+    display: flex;
+    column-gap: 5em;
+    .text-wrapper {
+      width: 40%;
+      .title {
+        color: $primaryPink;
+        font-size: 50px;
+        font-weight: 600;
+      }
+      .desc {
+        color: rgb(38, 38, 38);
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 10; /* number of lines to show */
+        line-clamp: 10;
+        -webkit-box-orient: vertical;
+        font-size: 17px;
+        word-spacing: 10px;
+      }
+      .read-more-wrapper {
+        cursor: pointer;
+        margin-top: 3.5em;
+        display: flex;
+        // align-items: center;
+        gap: 10px;
+        // .btn-wrapper {
+        //   display: flex;
+        //   align-items: center;
+        //   justify-content: center;
+        //   background-color: rgb(218, 218, 218);
+        //   border-radius: 50%;
+        //   padding: 5px;
+        //   .read-more-btn {
+        //     // color: $primaryBlue;
+        //     width: 23px;
+        //     height: 23px;
+        //   }
+        // }
+        .btn-text {
+          color: $primaryBlue;
+          font-weight: 600;
+          //   font-size: 13px;
+          font-size: 16px;
+        }
+      }
+    }
+    .image-wrapper {
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(235, 235, 235);
+      .profile-img {
+        max-width: 70%;
+      }
+    }
+  }
+  @media screen and (max-width: 1310px) {
+    .contents {
+      width: 1050px;
+      .image-wrapper {
+        .profile-img {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1160px) {
+    .contents {
+      width: 900px;
+      .image-wrapper {
+        .profile-img {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1020px) {
+    .contents {
+      width: 700px;
+      .image-wrapper {
+        .profile-img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 790px) {
+    .contents {
+      text-align: justify;
+      height: max-content;
+      width: 600px;
+      display: flex;
+      gap: 2em;
+      flex-direction: column;
+      .text-wrapper {
+        width: 100%;
+      }
+      .image-wrapper {
+        width: 100%;
+        .profile-img {
+          max-width: 70%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 670px) {
+    .contents {
+      padding: 7em 1em;
+      .text-wrapper {
+        .title {
+          font-size: 27px;
+        }
+      }
+    }
+  }
+}

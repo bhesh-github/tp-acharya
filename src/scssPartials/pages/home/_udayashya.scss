@@ -1,0 +1,107 @@
+.outer {
+  background-color: #fff;
+  .udayashya-comp {
+    padding: 7em 0;
+    display: flex;
+    justify-content: center;
+    background-color: #e9ffe078;
+    .contents {
+      width: 1197px;
+      display: flex;
+      align-items: center;
+      gap: 5em;
+      .image {
+        width: 50%;
+      }
+      .text-container {
+        width: 50%;
+        .head {
+          margin-top: -0.2em;
+          color: $primaryPink;
+          font-size: 50px;
+          font-weight: 600;
+        }
+        .brief {
+          text-align: justify;
+          color: rgb(38, 38, 38);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 10; /* number of lines to show */
+          line-clamp: 10;
+          -webkit-box-orient: vertical;
+          font-size: 17px;
+          word-spacing: 10px;
+          line-height: 26px;
+        }
+        .read-more-wrapper {
+          cursor: pointer;
+          margin-top: 3.5em;
+          display: flex;
+          gap: 10px;
+          .btn-text {
+            color: $primaryBlue;
+            font-weight: 600;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1310px) {
+      .contents {
+        width: 1050px;
+        .image {
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 1160px) {
+      .contents {
+        width: 900px;
+        .image {
+          max-width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 1020px) {
+      .contents {
+        width: 700px;
+        gap: 3em;
+        .image {
+          max-width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 790px) {
+      .contents {
+        text-align: justify;
+        height: max-content;
+        width: 600px;
+        display: grid;
+        grid-template-columns: 1fr;
+        // flex-direction: column;
+        gap: 2em;
+        .text-container {
+          grid-row-start: 1;
+          // grid-row-end: 2;
+          width: 100%;
+        }
+        .image-container {
+          width: 100%;
+          .profile-img {
+            max-width: 70%;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 670px) {
+      .contents {
+        padding: 0em 1em;
+        .text-container {
+          .head {
+            font-size: 27px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.pramukhKaryaharu-page {
+  display: flex;
+  justify-content: center;
+  //   margin-top: 5em;
+  .contents {
+    padding: 6em 0;
+    height: 100%;
+    width: 1197px;
+    display: grid;
+    grid-template-columns: 2.1fr 1fr;
+    gap: 3em;
+    .main-section {
+      .heading {
+        color: $primaryPink;
+        font-size: 40px;
+        font-weight: 600;
+      }
+      .desc {
+        font-size: 17px;
+        color: rgb(38, 38, 38);
+        word-spacing: 10px;
+        text-align: justify;
+        .sub-head {
+          color: $primaryBlue;
+        }
+      }
+    }
+    .links-section {
+      font-family: "Roboto", sans-serif;
+      .title {
+        color: $primaryBlue;
+        font-size: 35px;
+        font-weight: 600;
+      }
+      .links-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        .link {
+          display: flex;
+          align-items: center;
+          color: $primaryBlue;
+          font-size: 20px;
+          text-decoration: underline;
+          .dot {
+            min-width: 30px;
+            min-height: 30px;
+          }
+          &:hover {
+            color: $primaryPeru;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1310px) {
+    .contents {
+      width: 1050px;
+    }
+  }
+  @media screen and (max-width: 1160px) {
+    .contents {
+      width: 900px;
+    }
+  }
+  @media screen and (max-width: 1020px) {
+    .contents {
+      width: 700px;
+    }
+  }
+  @media screen and (max-width: 790px) {
+    .contents {
+      width: 600px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 670px) {
+    .contents {
+      width: 500px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .contents {
+      padding: 4em 1em;
+      width: 500px;
+      .main-section {
+        .heading {
+          font-size: 27px;
+        }
+        .desc {
+          font-size: 15px;
+        }
+      }
+      .links-section {
+        .title {
+          font-size: 25px;
+        }
+        .links-wrapper {
+          .link {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

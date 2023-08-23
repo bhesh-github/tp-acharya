@@ -1,0 +1,50 @@
+.home-banner-comp {
+  // background-color: pink;
+  height: 578px;
+  width: 100%;
+  .infinite-carousel {
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    .slider-img {
+      height: 100%;
+      width: 100%;
+      // height: 500px;   
+      // width: 500px;
+      background-color: red;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .dots-indicator {
+      position: absolute;
+      bottom: 4em;
+      left: 50%;
+      transform: translate(-50%);
+      margin-top: -2em;
+      z-index: 99;
+      display: flex !important;
+      justify-content: center;
+      gap: 10px;
+      list-style-type: none;
+      li {
+        width: 18px;
+        height: 18px;
+        border-radius: 50px;
+        display: inline-block;
+        background-color: $primaryWhite;
+        button {
+          cursor: pointer;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          color: transparent;
+          border: none;
+        }
+      }
+      li.carousel-dots-active {
+        background-color: $primaryPink;
+      }
+    }
+  }
+}

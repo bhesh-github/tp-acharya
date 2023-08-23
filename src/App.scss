@@ -1,0 +1,27 @@
+$primaryDarkerBlue: #001933;
+$primaryDarkBlue: #0d3455;
+$primaryBlue: #003893;
+$primaryPink: #dc143c;
+$primaryWhite: #f7f6f6;
+$primaryPeru: #e85806;
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import "./scssPartials/main/header/header";
+@import "./scssPartials/main/footer";
+@import "./scssPartials/pages/home/home.scss";
+// @import "./scssPartials/pages/parichaya/parichaya";
+
+@import "./scssPartials/pages/abalokan/abalokan";
+@import "./scssPartials/pages/abalokan/abalokanSubpage";
+@import "./scssPartials/pages/parichaya/parichaya";
+@import "./scssPartials/pages/parichaya/parichayaSubpage";
+@import "./scssPartials/pages/pramukhKaryaharu/pramukhKaryaharu";
+@import "./scssPartials/pages/pramukhKaryaharu/pramukhKaryaharuSubpage";
+@import "./scssPartials/pages/gallery/gallery";
+@import "./scssPartials/pages/contact/contact";
+@import "./scssPartials/pages/englishPages/englishPages";
