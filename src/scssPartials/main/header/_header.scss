@@ -65,11 +65,13 @@
     }
   }
   .bottom-bar {
-    height: 100px;
+    // height: 100px;
     width: 100%;
     display: flex;
     justify-content: center;
     .contents {
+      padding: 1em 0;
+      // background-color: red;
       height: 100%;
       width: 1197px;
       display: flex;
@@ -104,7 +106,7 @@
             text-decoration: none;
           }
           .dropdown-content {
-            margin-top: 1.3em;
+            margin-top: 1.5em;
           }
         }
       }
@@ -141,6 +143,8 @@
     @media screen and (max-width: 1020px) {
       .contents {
         width: 700px;
+      padding: 0.5em 0;
+
       }
     }
     @media screen and (max-width: 1025px) {
@@ -164,7 +168,8 @@
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  max-width: 200px;
+  // max-width: 200px;
+  width: max-content;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }

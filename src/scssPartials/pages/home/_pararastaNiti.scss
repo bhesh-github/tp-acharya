@@ -5,6 +5,8 @@
   justify-content: center;
   height: 100%;
   padding-bottom: 4em;
+  position: relative;
+  z-index: 1;
   .contents {
     padding: 4em 0;
     height: 100%;
@@ -96,7 +98,6 @@
 }
 @media screen and (max-width: 670px) {
   .pararasta-niti-comp {
-    margin-top: 3.5em;
     .contents {
       padding: 0em 1em;
       .title {

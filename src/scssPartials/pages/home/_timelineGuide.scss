@@ -1,3 +1,28 @@
+.overlay {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  background-color: $primaryDarkBlue;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  color: #fff;
+  .close-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    cursor: pointer;
+  }
+  .text-wrapper {
+    text-align: justify;
+    margin-top: 5em;
+    padding: 0 1em;
+  }
+}
+
 // Global styles and transitions
 .timeline-transition {
   transition: background-image 0.5s ease-in-out;
@@ -5,12 +30,10 @@
 
 // Timeline Wrapper
 .timeline-wrapper {
+  background-color: rgba(0, 0, 0, 0.573);
   position: relative;
-  background-color: rgba(0, 0, 0, 0.356);
-
   // Timeline Background
   .timeline-background {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -34,16 +57,46 @@
       display: flex;
 
       // Caption Wrapper
-      .caption-wrapper {
-        
-        position: -webkit-sticky; /* Safari */
-        position: sticky;
-        top: 5em;
+      .samaya-rekha-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        // position: -webkit-sticky; /* Safari */
+        // position: sticky;
+        position: fixed;
+        // top: 6em;
+        top: 2em;
+
+        left: 1.5em;
         height: max-content;
         width: 230px;
         font-weight: 600;
-        font-size: 50px;
+        font-size: 30px;
         color: #fff;
+        .clock-text-wrapper {
+          display: flex;
+          gap: 7px;
+          align-items: center;
+          .clock-icon {
+            width: 30px;
+            height: 30px;
+          }
+          .clock-text {
+            font-weight: 400;
+
+            font-size: 17px;
+          }
+        }
+        .samaya-rekha {
+          .rekha {
+            margin-left: 5px;
+          }
+        }
+      }
+      @media screen and (max-width: 1020px) {
+        .samaya-rekha-text-wrapper {
+          display: none;
+        }
       }
 
       // Years Inner
@@ -56,12 +109,10 @@
         padding: 20em 0;
         border-right: 1px solid #fff;
         height: 100%;
-
         // Dot Year Wrapper
         .dot-year-wrapper {
           display: flex;
           flex-direction: column;
-
           // Year
           .year {
             color: #ffffff73;
@@ -77,7 +128,6 @@
             font-weight: 600;
             transition: font-size 0.5s;
             height: 100px;
-
             // Selected Year
             &.selected {
               color: #fff;
@@ -86,7 +136,6 @@
               font-size: 5em;
               gap: 0.4em;
             }
-
             // Dot
             .dot {
               font-size: 40px;
@@ -95,37 +144,215 @@
           }
         }
       }
+      @media screen and (max-width: 1200px) {
+        .years-inner {
+          margin-left: 10em;
+        }
+      }
+      @media screen and (max-width: 1100px) {
+        .years-inner {
+          margin-left: 8em;
+        }
+      }
+      @media screen and (max-width: 1020px) {
+        .years-inner {
+          margin-top: -10em;
+          margin-left: 2em;
+          border-left: 1px solid #fff;
+          border-right: none;
+          .dot-year-wrapper {
+            .year {
+              visibility: hidden;
+              gap: 0em;
+              display: grid;
+              grid-template-columns: 1fr 15fr;
+              margin: 0.2em 0;
+              cursor: pointer;
+              font-size: 18px;
+              &.selected {
+                visibility: visible;
+                font-size: 3em;
+              }
+              // Dot
+              .dot {
+                visibility: visible;
+                grid-row-start: 1;
+                font-size: 30px;
+                margin-left: -0.5em;
+              }
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 361.5px) {
+        .years-inner {
+          .dot-year-wrapper {
+            .year {
+              grid-template-columns: 1fr 70fr;
+            }
+          }
+        }
+      }
     }
-
-    // Content
     .content {
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 3em;
+      position: fixed;
+      z-index: 1;
+      top: 10em;
       padding: 20px;
       left: 35em;
       color: #fff;
       font-size: 18px;
       height: 100%;
-
-      // Text
       .text {
         text-align: left;
         width: 650px;
-
-        // Title
         .title {
-          font-size: 3em;
-
-          // Changing Years
+          font-weight: 600;
+          font-size: 2.5em;
+          margin-bottom: 0.5em;
           .changing-years {
             font-size: 0.8em;
           }
         }
-
-        // Brief
         .brief {
           font-size: 28px;
+        }
+        .read-more-btn {
+          background-color: #fff;
+          font-size: 14px;
+          padding: 10px 20px;
+          color: #000;
+          border-radius: 0;
+          margin-top: 10px;
+        }
+        @media screen and (min-width: 645px) {
+          .read-more-btn {
+            display: none;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1420px) {
+      .content {
+        left: 32em;
+        .text {
+          width: 550px;
+          .title {
+            font-size: 2em;
+          }
+          .brief {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      .content {
+        left: 30em;
+
+        .text {
+          width: 550px;
+          .title {
+            font-size: 2em;
+          }
+          .brief {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1100px) {
+      .content {
+        left: 25em;
+        .text {
+          width: 450px;
+          .title {
+            font-size: 1.7em;
+          }
+          .brief {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1020px) {
+      .content {
+        top: 9.5em;
+        left: 18em;
+        .text {
+          width: 500px;
+          .title {
+            line-height: 50px;
+            font-size: 2em;
+          }
+          .brief {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 855px) {
+      .content {
+        top: 13.5em;
+        left: 10em;
+        .text {
+          width: 400px;
+          .title {
+            line-height: 40px;
+            font-size: 1.5em;
+          }
+          .brief {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 645px) {
+      .content {
+        left: 4em;
+        .text {
+          .title {
+            line-height: 40px;
+            font-size: 1.4em;
+          }
+          .brief {
+            display: none;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 645px) {
+      .content {
+        left: 3em;
+        .text {
+          width: 390px;
+          .brief {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 459.5px) {
+      .content {
+        .text {
+          width: 280px;
+          .title {
+            line-height: 35px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 361px) {
+      .content {
+        left: 2.3em;
+        .text {
+          .title {
+            font-size: 1.2em;
+          }
+          .brief {
+            font-size: 18px;
+          }
         }
       }
     }

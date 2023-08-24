@@ -1,13 +1,13 @@
-.spinner-wrapper {
-  .spinner {
-  }
-}
+
 
 .footer-comp {
   background-color: $primaryDarkBlue;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
+  width: 100%;
+  position: absolute;
   // justify-content: center;
   .contents {
     // justify-content: center;

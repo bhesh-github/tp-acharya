@@ -1,5 +1,7 @@
 .outer {
   background-color: #fff;
+  position: relative;
+  z-index: 1;
   .udayashya-comp {
     padding: 7em 0;
     display: flex;

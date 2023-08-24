@@ -1,8 +1,11 @@
 .intro-comp {
+  position: relative;
   background-color: #fff;
   display: flex;
   justify-content: center;
+  z-index: 1;
   .contents {
+    top: 6em;
     padding: 7em 0;
     // height: 500px;
     width: 1197px;
